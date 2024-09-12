@@ -24,7 +24,7 @@ return new class extends Migration
                 ->onDelete('cascade');
 
             // Relación con artículo
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('article_id');
             $table->foreign('article_id')
                 ->references('id')
                 ->on('articles')
