@@ -50,4 +50,14 @@ class User extends Authenticatable
         return $this->hasOne(Profile::class);
     }
 
+    // Relacion de uno a muchos (user-article)
+    public function articles() {
+        return $this->hasMany(Article::class);
+    }
+
+    // Relación de muchos a muchos (user-comments)
+    public function comments() {
+        return $this->hasMany(Comment::class);
+    }
+
 }
