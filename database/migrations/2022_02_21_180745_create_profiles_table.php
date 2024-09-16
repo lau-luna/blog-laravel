@@ -17,6 +17,13 @@ return new class extends Migration
             $table->id();
             $table->string('photo', 255)->nullable();
 
+            // Atributos agregados de la actividad
+            $table->string('profession', 60)->nullable();
+            $table->string('about', 255)->nullable();
+            $table->string('twitter', 100)->nullable();
+            $table->string('linkedin', 100)->nullable();
+            $table->string('facebook', 100)->nullable();
+
             //Primera forma
             $table->unsignedBigInteger('user_id')->unique();
             $table->foreign('user_id')
